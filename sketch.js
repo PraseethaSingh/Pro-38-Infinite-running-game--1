@@ -73,6 +73,10 @@ function draw() {
   background("blue");
   text("Score: "+ score, 500,50);
   
+  //Adding CAMERA POSITION
+  camera.position.x = displayWidth/2
+  camera.position.y = displayWidth/2
+  
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
     ground.velocityX = -(6 + 3*score/100);
